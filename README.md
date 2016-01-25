@@ -1,33 +1,55 @@
-# linux
+# Заметки линуксоеда
 
-Удаление репозитория:
+## Удаление репозитория
+```
 cd /etc/yum.repos.d/ - там удалить ненужный реп
+```
 
-Нехватка вотчеров в системе
+# Нехватка вотчеров в системе
+```
 sudo sysctl fs.inotify.max_user_watches=524288
+```
 
-sbt 'export fullClasspath'
-
-Журналирование:
+## Журналирование
+```
+#!bash
 journalctl
+```
 
-Размер журнала
+### Размер журнала
+```
+#!bash
 journalctl --disk-usage
+```
 
-Журнал последней сессии
+### Просмотр журнала контейнера
+```
+#!bash
+journalctl -f CONTAINER_NAME=db
+```
+
+## Журнал последней сессии
+
+```
+#!bash
 journalctl -b
+```
 
-Enable CS at Ubuntu:
+## Игры
+
+### Enable CS at Ubuntu:
 setsebool -P selinuxuser_execheap 1
 
-Enable Eurotruck Simulator at Fedora 20:
+### Enable Eurotruck Simulator at Fedora 20:
 sudo yum install libtxc_dxtn
  
-cd /cygdrive/c/Users/oblivion/Downloads
+
+## Загрузка файлов
+
 aria2c.exe --seed-time=0 \[rutracker.org\].t4575031.torrent
 aria2c.exe --seed-time=0 die_hard_2.torrent
-
-Установка приложений
+		
+## Установка приложений
 sudo dnf install -y git htop nmon bmon vlc zsh tmux vim aria2 docker ansible 
 # Python installation
 sudo dnf install -y python-pip python-ipython rpm-build python-devel
