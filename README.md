@@ -174,3 +174,39 @@ sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 ```
 grep -nr $YOUR_STRING_OR_REGEXP $PATH
 ```
+
+# Docker
+
+## Генерация контейнера
+```
+docker build --no-cache=true --rm=true -t <CONTAINER_NAME> .
+```
+
+## Запуск контейнера
+```
+docker run --privileged=true -i -t -v <HOST_PATH>:<CONTAINER_PATH> <CONTAINER_NAME> /bin/bash
+```
+
+## Список образов
+
+```
+docker images
+```
+
+## Удаление образа
+
+```
+docker rmi -f <IMAGE_ID>
+```
+
+## Убить контейнер
+
+```
+docker rm -f -v <IMAGE_ID>
+```
+
+## Убить все контейнеры, даже остановленные
+
+```
+sudo docker ps -qa | xargs -ig sudo docker rm -f g
+```
