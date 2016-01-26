@@ -63,7 +63,7 @@ youtube-dl -x --audio-format mp3 --audio-quality 0 'https://www.youtube.com/watc
 youtube-dl -x --audio-format mp3 --audio-quality 0 --playlist-start 1 'https://www.youtube.com/watch?v=kX_pzzWtpYc&list=UUPd8-0dbOIaT4gYaFfQoSeQ'
 ```
 
-		
+
 ## Установка приложений
 
 ```
@@ -170,7 +170,9 @@ iconv -f CP1251 -t UTF-8 file.in > file.out
 
 ## Выключение Selinux
 
+```
 sudo sed -i.bak s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
+```
 
 ## Замена строк в Linux
 
