@@ -23,12 +23,6 @@ journalctl
 journalctl --disk-usage
 ```
 
-### Просмотр журнала контейнера
-
-```
-journalctl -f CONTAINER_NAME=db
-```
-
 ## Журнал последней сессии
 
 ```
@@ -96,19 +90,7 @@ sudo dd if=/dev/zero of=/dev/sdb bs=4k && sync
 # Отправка Growl сообщения (GNOME)
 
 ```
-notify-send --app-name="Blinks" --icon="/home/ilya/projects/blinks-parser/assets/icon.png" "Blinks Parser" "Hello, World!"
-```
-
-# Генерация SSH ключа
-
-```
-ssh-keygen -t rsa -b 4096 -C "your.mail@gmail.com"
-```
-
-## Публикация ключа
-
-```
-ssh-copy-id -i ~/.ssh/my-ssh-public-key my_user@my_host
+notify-send --app-name="<APPLICATION_NAME>" --icon="<PATH_TO_ICON>" "<TITLE>" "<MESSAGE>"
 ```
 
 ## Смена оболочки с Bash на Fish
@@ -131,6 +113,7 @@ ll | wc -l
 ```
 
 ## Подсчет занимаемого диска
+
 ```
 du -hcs
 du -ha
@@ -182,6 +165,7 @@ sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 ```
 
 ## Поиск подстроки/Regexp в папке с файлами
+
 ```
 grep -nr $YOUR_STRING_OR_REGEXP $PATH
 ```
