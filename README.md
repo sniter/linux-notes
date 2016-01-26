@@ -100,14 +100,21 @@ sudo dd if=/dev/zero of=/dev/sdb bs=4k && sync
 notify-send --app-name="Blinks" --icon="/home/ilya/projects/blinks-parser/assets/icon.png" "Blinks Parser" "Hello, World!"
 ```
 
-Генерация SSH ключа
-ssh-keygen -t rsa -C "sniter@gmail.com"
+# Генерация SSH ключа
 
-Публикация ключа
+```
+ssh-keygen -t rsa -b 4096 -C "your.mail@gmail.com"
+```
+
+## Публикация ключа
+```
 ssh-copy-id -i ~/.ssh/my-ssh-public-key my_user@my_host
+```
 
-Смена оболочки с Bash на Fish
+## Смена оболочки с Bash на Fish
+```
 chsh -s /usr/bin/fish
+```
 
 ## Вывод Pretty JSON:
 
@@ -117,6 +124,7 @@ echo $FILE | ruby -r json -e 'jj JSON.parse gets'
 ```
 
 ## Подсчет файлов в директории
+
 ```
 ll | wc -l
 ```
