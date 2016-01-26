@@ -63,7 +63,6 @@ youtube-dl -x --audio-format mp3 --audio-quality 0 'https://www.youtube.com/watc
 youtube-dl -x --audio-format mp3 --audio-quality 0 --playlist-start 1 'https://www.youtube.com/watch?v=kX_pzzWtpYc&list=UUPd8-0dbOIaT4gYaFfQoSeQ'
 ```
 
-
 ## Установка приложений
 
 ```
@@ -107,11 +106,13 @@ ssh-keygen -t rsa -b 4096 -C "your.mail@gmail.com"
 ```
 
 ## Публикация ключа
+
 ```
 ssh-copy-id -i ~/.ssh/my-ssh-public-key my_user@my_host
 ```
 
 ## Смена оболочки с Bash на Fish
+
 ```
 chsh -s /usr/bin/fish
 ```
@@ -185,38 +186,3 @@ sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 grep -nr $YOUR_STRING_OR_REGEXP $PATH
 ```
 
-# Docker
-
-## Генерация контейнера
-```
-docker build --no-cache=true --rm=true -t <CONTAINER_NAME> .
-```
-
-## Запуск контейнера
-```
-docker run --privileged=true -i -t -v <HOST_PATH>:<CONTAINER_PATH> <CONTAINER_NAME> /bin/bash
-```
-
-## Список образов
-
-```
-docker images
-```
-
-## Удаление образа
-
-```
-docker rmi -f <IMAGE_ID>
-```
-
-## Убить контейнер
-
-```
-docker rm -f -v <IMAGE_ID>
-```
-
-## Убить все контейнеры, даже остановленные
-
-```
-sudo docker ps -qa | xargs -ig sudo docker rm -f g
-```
