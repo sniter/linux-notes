@@ -28,6 +28,12 @@ journalctl --disk-usage
 ```
 journalctl -b
 ```
+	
+## Варианты очистки журнала (По времени, по размеру)
+```
+journalctl --vacuum-time=2d
+journalctl --vacuum-size=500M
+```
 
 ## Игры
 
@@ -170,3 +176,4 @@ sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 grep -nr $YOUR_STRING_OR_REGEXP $PATH
 ```
 
+	
