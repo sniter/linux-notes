@@ -51,7 +51,8 @@ mkdir -p bin
 mkdir -p projects
 
 # User specific apps
-sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget sublime-text
+sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget sublime-text \
+     dosfstools exfat-utils ntfs-3g
 
 # ZSH Config
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -68,10 +69,10 @@ winetricks gdiplus
 wget http://www.oldapps.com/itunes.php\?app\=B5B610F48F7FC5430F407E6B316255B1
 
 # Docker
-pacman -S docker btrfs-progs lxc
+sudo pacman -S docker btrfs-progs lxc
 sudo usermod -a -G docker ${USER_NAME}
-systemctl start docker.service
-systemctl enable docker.service
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
 
 # RVM
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -79,6 +80,10 @@ curl -sSL https://get.rvm.io | bash -s stable
 rvm install 2.3.0
 rvm use 2.3.0
 gem install tmuxinator
+
+# Development Python
+sudo pacman -S ansible python2 ipython2 python2-pip python2-numpy python2-psycopg2
+sudo pip2 install pgcli
 
 # Cloning projects
 cd ~/projects
