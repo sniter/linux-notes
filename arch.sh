@@ -28,13 +28,19 @@ passwd ${USER_NAME}
 pcman -S sudo
 # TODO edit visudo: Replace "# %wheel ALL=(ALL) ALL" with "%wheel ALL=(ALL) ALL"
 EDITOR=vim visudo
+
 # GUI
 pacman -S xorg-server xorg-server-utils gnome
+systemctl start gdm.service
+systemctl enable gdm.service
 
 # Enabling Bluetooth
 pacman -S bluez bluez-utils pulseaudio-bluetooth
 modprobe btusb
 systemctl start bluetooth.service
+systemctl enable bluetooth.service
+
+# TODO: Enable AUR
 
 #######################################################################################
 ## User Specific actions
@@ -44,7 +50,7 @@ mkdir -p bin
 mkdir -p projects
 
 # User specific apps
-sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget
+sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget sublime-text
 
 # ZSH Config
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -57,6 +63,7 @@ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetric
 pacman -S wine lib32-libpulse cabextract
 WINEARCH=win32 winecfg
 winetricks gdiplus
+# TODO: Replace with more adequate command
 wget http://www.oldapps.com/itunes.php\?app\=B5B610F48F7FC5430F407E6B316255B1
 
 # Docker
