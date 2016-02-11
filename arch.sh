@@ -52,7 +52,7 @@ mkdir -p projects
 
 # User specific apps
 sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget sublime-text \
-     dosfstools exfat-utils ntfs-3g
+     dosfstools exfat-utils ntfs-3g libreoffice-fresh
 
 # ZSH Config
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
