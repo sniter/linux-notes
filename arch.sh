@@ -51,8 +51,11 @@ mkdir -p bin
 mkdir -p projects
 
 # User specific apps
-sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk glances openssh aria2 tmux wget sublime-text \
+sudo pacman -S git tmux youtube-dl chromium jdk8-openjdk  openssh aria2 tmux wget sublime-text \
      dosfstools exfat-utils ntfs-3g libreoffice-fresh festival festival-english
+
+# Glances
+sudo pacman -S glances python-matplotlib python-docker-py
 
 # ZSH Config
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -81,8 +84,8 @@ rvm install 2.3.0
 rvm use 2.3.0
 gem install tmuxinator
 
-# Development Python
-sudo pacman -S ansible python2 ipython2 python2-pip python2-numpy python2-psycopg2
+# Development Python 2
+sudo pacman -S ansible python2 ipython2 python2-pip python2-numpy python2-psycopg2 python2-matplotlib
 sudo pip2 install pgcli
 
 # Cloning projects
