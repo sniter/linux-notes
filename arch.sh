@@ -72,7 +72,7 @@ winetricks gdiplus
 wget http://www.oldapps.com/itunes.php\?app\=B5B610F48F7FC5430F407E6B316255B1
 
 # Docker
-sudo pacman -S docker btrfs-progs lxc
+sudo pacman -S docker btrfs-progs lxc docker-compose
 sudo usermod -a -G docker ${USER_NAME}
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
@@ -88,6 +88,9 @@ gem install tmuxinator
 sudo pacman -S ansible python2 ipython2 python2-pip python2-numpy python2-psycopg2 python2-matplotlib
 sudo pip2 install pgcli
 
+# Sensors
+#sudo pacman -S lm_sensors hddtemp
+
 # Cloning projects
-cd ~/projects
-git clone git@github.com:sniter/linux-notes.git
+#cd ~/projects
+#git clone git@github.com:sniter/linux-notes.git
