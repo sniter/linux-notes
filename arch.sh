@@ -40,6 +40,9 @@ modprobe btusb
 systemctl start bluetooth.service
 systemctl enable bluetooth.service
 echo 'Enable=Source,Sink,Media,Socket' > /etc/bluetooth/main.conf
+# In case headses suck
+#pactl load-module module-bluetooth-discover
+#systemctl stop bluetooth.service; sleep 5; systemctl start bluetooth.service
 
 # TODO: Enable AUR
 
