@@ -10,7 +10,7 @@ pacman -S vim zsh git
 #######################################################################################
 # GRUB install
 #######################################################################################
-grub-install --recheck ${BOOT_DEVICE}
+grub-install --recheck ${MAIN_DEVICE}
 grub-mkconfig -o ${GRUB_CFG_FILE}
 
 #######################################################################################
@@ -85,5 +85,6 @@ cat << EOF > ${PACMAN_FILE}
 Server = http://repo.archlinux.fr/x86_64
 
 EOF
+pacman -Sy
 pacman -S yaourt
 

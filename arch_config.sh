@@ -10,5 +10,6 @@ USER_ENCODING="${USER_LOCALE}.${$USER_CHARSET}"
 USER_TIMEZONE='Europe/Minsk'
 USER_SHELL='/bin/zsh'
 BOOT_DEVICE='/dev/sdb'
+MAIN_DEVICE='/dev/sdb'
 GRUB_CFG_FILE='/boot/grub/grub.cfg'
 PACMAN_FILE='/etc/pacman.conf'
