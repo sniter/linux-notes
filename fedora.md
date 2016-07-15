@@ -3,26 +3,18 @@
 ## Common dependencies
 
 ```
-install htop glances vlc vim git zsh
-```
+# Install common deps
+sudo install -y htop glances vlc vim git zsh aria2 youtube-de ffmpeg tmux glances
 
-## Zsh modules
-```
+# Install Zsh deps
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .zsh-highlight
-```
 
-## Ranger Install
-
-```
+# Install Ranger
 install highlight atool caca-utils poppler-utils ranger
-ranger --copy-config=all
+
+# Install Python tools
+sudo pip install --upgrade pip
+sudo pip install percol
+
 ```
-
-## RVM Install
-
-TODO
-
-## Docker Install 
-
-TODO
