@@ -1,13 +1,21 @@
 # Заметки линуксоеда
 
-## КОнвертирование аудиофайлов
+## Содержание
+
+* [Особенности Fedora](./fedora.md)
+* [Docker](./docker.md)
+* [Журналирование](./journalctl.md)
+
+
+## Установка зависимостей в системе
+
 ```
-for f in ./*.m4a; do ffmpeg -i "$f" -v 5 -y -acodec libmp3lame -ac 2 -ab 192k "${f%.m4a}.mp3"; done
+curl https://raw.githubusercontent.com/sniter/linux-notes/master/fedora.sh | bash
 ```
 
-## Удаление репозитория
+## Конвертирование аудиофайлов
 ```
-cd /etc/yum.repos.d/ - там удалить ненужный реп
+for f in ./*.m4a; do ffmpeg -i "$f" -v 5 -y -acodec libmp3lame -ac 2 -ab 192k "${f%.m4a}.mp3"; done
 ```
 
 # Подтверждение различных действий в системе 
@@ -22,29 +30,7 @@ yes | pacman -S <My-Package>
 sudo sysctl fs.inotify.max_user_watches=524288
 ```
 
-## Журналирование
 
-```
-journalctl
-```
-
-### Размер журнала
-
-```
-journalctl --disk-usage
-```
-
-## Журнал последней сессии
-
-```
-journalctl -b
-```
-	
-## Варианты очистки журнала (По времени, по размеру)
-```
-journalctl --vacuum-time=2d
-journalctl --vacuum-size=500M
-```
 
 ## Игры
 
