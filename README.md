@@ -7,7 +7,7 @@
 * Специфика работы с приложениями
  * [Docker](./docker.md)
  * [Git](./git.md)
- * [Postgres](./postgres.md)
+ * [Postgres](./psql.md)
  * [SSH](./ssh.md)
 * Системные службы
  * [Журналирование](./journalctl.md)
@@ -23,11 +23,6 @@ curl https://raw.githubusercontent.com/sniter/linux-notes/master/fedora.sh | bas
 for f in ./*.m4a; do ffmpeg -i "$f" -v 5 -y -acodec libmp3lame -ac 2 -ab 192k "${f%.m4a}.mp3"; done
 ```
 
-# Подтверждение различных действий в системе 
-
-```
-yes | pacman -S <My-Package>
-```
 
 # Нехватка вотчеров в системе
 

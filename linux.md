@@ -62,3 +62,9 @@ sudo dd bs=4M if=Fedora-Server-DVD-x86_64-22.iso of=/dev/sdb
 ```
 chsh -s /usr/bin/fish
 ```
+
+# Подтверждение различных действий в системе 
+
+```
+yes | pacman -S <My-Package>
+```
