@@ -27,3 +27,9 @@ git diff --no-color commit1..commit2 > patch.txt
 git apply patch.txt
 ```
 
+## Быстрый коммит 
+
+```
+git commit -a -m "Modified by $(whoami) at $(date)"
+```
+
