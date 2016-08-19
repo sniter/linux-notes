@@ -5,10 +5,10 @@
 * [Общие команды](./linux.md)
 * [Особенности Fedora](./fedora.md)
 * Специфика работы с приложениями
-*  [Docker](./docker.md)
-*  [Git](./git.md)
-*  [Postgres](./postgres.md)
-*  [SSH](./ssh.md)
+ * [Docker](./docker.md)
+ * [Git](./git.md)
+ * [Postgres](./postgres.md)
+ * [SSH](./ssh.md)
 * Системные службы
  * [Журналирование](./journalctl.md)
 
