@@ -12,6 +12,7 @@ sudo dnf install -y python python-pip rpm-build
 
 ## Upgrade pip
 sudo pip install --upgrade pip
+sudo python -m pip install virtualenv
 
 ## Install Percol
 sudo pip install percol
