@@ -40,7 +40,7 @@ du -ha
 ## Дерево файлов
 
 ```
-tree -hup
+tree -hups --du -F --dirsfirst
 ```
 
 ## Подсчет файлов в директории
