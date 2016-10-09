@@ -11,6 +11,9 @@
  * [SSH](./ssh.md)
 * Системные службы
  * [Журналирование](./journalctl.md)
+* Другие Операционные системы
+ * [Arch Linux](./arch/arch_linux.sh)
+ * [Apricity OS](./arch/apricity_os.md)
 
 ## Установка зависимостей в системе
 
