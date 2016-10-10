@@ -85,6 +85,14 @@ bluetoothctl connect <MAC-ADDR>
 bluetoothctl connect <MAC-ADDR>
 ```
 
+# Wine
+
+## Включение поддержки кириллицы
+
+Обявляем переменную окружения **LC_CTYPE** с нужной кодировкой:
+```
+env LANG=ru_RU.utf8 LC_CTYPE=ru_RU.utf8 WINEPREFIX="~/.wine" wine "C:\Path\To\Your\Program"
+```
 
 ## Отключение надоедающих нотификейшнов при подключении телефона
 
