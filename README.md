@@ -3,7 +3,6 @@
 ## Содержание
 
 * [Общие команды](./linux.md)
-* [Особенности Fedora](./fedora.md)
 * Специфика работы с приложениями
  * [Docker](./docker.md)
  * [Git](./git.md)
@@ -11,14 +10,15 @@
  * [SSH](./ssh.md)
 * Системные службы
  * [Журналирование](./journalctl.md)
-* Другие Операционные системы
- * [Arch Linux](./arch/arch_linux.sh)
- * [Apricity OS](./arch/apricity_os.md)
+* Дистрибутивы Linux
+ * [Fedora](./distributions/fedora.md)
+ * [Arch Linux](./distributions/arch_linux.sh)
+ * [Apricity OS](./distributions/apricity_os.md)
 
 ## Установка зависимостей в системе
 
 ```
-curl https://raw.githubusercontent.com/sniter/linux-notes/master/fedora.sh | bash
+curl https://raw.githubusercontent.com/sniter/linux-notes/master/distributions/fedora.sh | bash
 ```
 
 ## Конвертирование аудиофайлов
@@ -31,20 +31,6 @@ for f in ./*.m4a; do ffmpeg -i "$f" -v 5 -y -acodec libmp3lame -ac 2 -ab 192k "$
 
 ```
 sudo sysctl fs.inotify.max_user_watches=524288
-```
-
-## Игры
-
-### Enable CS at Ubuntu:`
-
-```
-setsebool -P selinuxuser_execheap 1
-```
-
-### Enable Eurotruck Simulator at Fedora 20:
-
-```
-sudo dnf install libtxc_dxtn
 ```
 
 ## Загрузка файлов
