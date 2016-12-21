@@ -18,10 +18,68 @@ netstat -tuplen
 sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 ```
 
-## Поиск подстроки/Regexp в папке с файлами
+## Подстанов переменных окружения в строки
 
+``` shell
+echo '$USER' > in.log
+cat in.log | envsubst > out.log
+cat out.log # ilya
 ```
+
+Можно использовать следующие способы обозначения переменных
+``` shell
+$USER
+${USER}
+```
+
+**ВНИМАНИЕ!**
+Выражения `$(date)` обрабатываться командой `envsubst` не будут!
+
+### Экранирование
+
+Когда количество переменных велико - экранировать можно символ доллар через явное объявление переменной
+``` shell
+export DLR='$'; echo '${DLR}http_server $USER' | envsubst # $http_server ilya
+```
+
+Когда количество переменных которыми мы оперируем конечно, то в таком случае можно использовать параметр функции `envsubst`
+``` shell
+echo '$http_server $USER' | envsubst "$USER"            # $http_server ilya
+echo '$http_server $USER' | envsubst "$USER,$USERNAME"  # $http_server ilya
+echo '$http_server $USER' | envsubst "$USER,$USERNAME"  # $http_server ilya
+```
+
+## Grep
+
+Поиск подстроки/Regexp в папке с файлами
+``` shell
 grep -nr $YOUR_STRING_OR_REGEXP $PATH
+```
+
+Использование Regexp
+``` shell
+env | grep -P 'USER\w*' 
+
+# Will find:
+# USERNAME=ilya
+# USER=ilya
+```
+
+Вывод только того, что соответствует Регулярному выражению
+``` shell
+env | grep -oP 'USER\w*'
+
+# Will find:
+# USERNAME
+# USER
+```
+
+Отображать только то, что не соответствует выражению
+``` shell
+env | grep USER | grep -v NAME
+
+# Will find:
+# USER=ilya
 ```
 
 ## Конвертирование кодировки файлов CP1251 -> UTF-8 
