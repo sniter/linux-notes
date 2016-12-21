@@ -12,10 +12,22 @@
 netstat -tuplen 
 ```
 
-## Замена строк
+## Sed
+
+В файлах:
+``` shell
+sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
 
 ```
-sed -i.bak s/some\ regexp\ here/replace\ with\ string/g /path/to/your/file
+
+В пайпах:
+``` shell
+env | sed 's/=.*//' 
+```
+
+Также поддерживается работа с группами
+``` shell
+env | sed 's/\(\w\+\)=\(.*\)/$\1=\2/' | head -n 1 # $LANG=en_US.UTF-8
 ```
 
 ## Подстанов переменных окружения в строки
@@ -48,6 +60,13 @@ echo '$http_server $USER $USERNAME' | envsubst "$USER"            # $http_server
 echo '$http_server $USER $USERNAME' | envsubst "$USER $USERNAME"  # $http_server ilya ilya
 echo '$http_server $USER $USERNAME' | envsubst "$USER,$USERNAME"  # $http_server ilya ilya
 ```
+
+В случае если мы точно уверены в том что нам нужно заменить все переменные которые объявлены в текущем окружениии, то можно использовать следующий код
+``` shell
+echo '$http_server $USER $USERNAME' | envsubst "$(env | grep -oP '^\w+(?=)' | sed 's/^\(.*\)/$\1/g' | paste -sd ' ')" # $http_server ilya ilya
+```
+
+В данном 
 
 ## Grep
 
