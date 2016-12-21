@@ -82,6 +82,31 @@ env | grep USER | grep -v NAME
 # USER=ilya
 ```
 
+# Отправка почты (для тестирования отправки почты, например)
+
+``` shell
+echo "This is Email Body" | mailx -v -s "This is subject" -S smtp="smtp://localhost:1025" -S from="sender@any.smtp.server.com" recipient@any.smtp.server.com
+```
+
+Ответ программы будет приблизительно следующим
+
+```
+Resolving host localhost . . . done.
+Connecting to 127.0.0.1:1025 . . . connected.
+220 41df78f207b4 ESMTP
+>>> HELO gigabyte
+250 OK: Nice to meet you [172.25.0.1]
+>>> MAIL FROM:<sender@any.smtp.server.com>
+250 Accepted
+>>> RCPT TO:<recipient@any.smtp.server.com>
+250 Accepted
+>>> DATA
+354 End data with <CR><LF>.<CR><LF>
+>>> .
+250 Message queued as 0pddHCLB
+>>> QUIT
+```
+
 ## Конвертирование кодировки файлов CP1251 -> UTF-8 
 
 ```
