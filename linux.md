@@ -44,9 +44,9 @@ export DLR='$'; echo '${DLR}http_server $USER' | envsubst # $http_server ilya
 
 Когда количество переменных которыми мы оперируем конечно, то в таком случае можно использовать параметр функции `envsubst`
 ``` shell
-echo '$http_server $USER' | envsubst "$USER"            # $http_server ilya
-echo '$http_server $USER' | envsubst "$USER,$USERNAME"  # $http_server ilya
-echo '$http_server $USER' | envsubst "$USER,$USERNAME"  # $http_server ilya
+echo '$http_server $USER $USERNAME' | envsubst "$USER"            # $http_server ilya $USERNAME
+echo '$http_server $USER $USERNAME' | envsubst "$USER $USERNAME"  # $http_server ilya ilya
+echo '$http_server $USER $USERNAME' | envsubst "$USER,$USERNAME"  # $http_server ilya ilya
 ```
 
 ## Grep
