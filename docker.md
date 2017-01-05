@@ -1,8 +1,14 @@
 # Docker
 
+## Получить IP хоста для проброса в докер
+
+``` shell
+ifconfig docker0 | grep 'inet' | awk '{print $2}' | sed 's/addr://'
+```
+
 ## Генерация образа
 
-```
+``` shell
 docker build --no-cache=true --rm=true -t <CONTAINER_NAME> .
 ```
 
