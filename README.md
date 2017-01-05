@@ -26,6 +26,9 @@ curl https://raw.githubusercontent.com/sniter/linux-notes/master/distributions/f
 for f in ./*.m4a; do ffmpeg -i "$f" -v 5 -y -acodec libmp3lame -ac 2 -ab 192k "${f%.m4a}.mp3"; done
 ```
 
+## Работа с Google Drive
+
+[Insynchq headless](https://www.insynchq.com/) - мощный инструмент по синхронизации папок из GDrive
 
 # Нехватка вотчеров в системе
 

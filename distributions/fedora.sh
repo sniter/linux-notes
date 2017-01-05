@@ -3,10 +3,6 @@
 # Common deps
 sudo dnf install -y htop glances vlc vim git zsh aria2 youtube-dl ffmpeg tmux 
 
-## Install Zsh deps
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .zsh-highlight
-
 # Install python deps
 sudo dnf install -y python python-pip rpm-build
 
@@ -27,3 +23,10 @@ sudo python3 -m pip install prompt-toolkit jupyter setproctitle distro xonsh
 
 ## Выключение Selinux
 sudo sed -i.bak s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
+
+
+## Создание Python-env
+virtualenv -p $(which python3) ~/.ansible-venv
+~/.ansible-venv/bin/pip install ansible
+
+
