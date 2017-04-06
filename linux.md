@@ -1,5 +1,9 @@
 # Linux 
 
+## Ссылки
+
+* Advanced Bash scripting -- http://www.tldp.org/LDP/abs/html/io-redirection.html
+
 ## Perfomance Tools
 
 
