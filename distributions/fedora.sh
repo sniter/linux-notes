@@ -4,6 +4,7 @@
 sudo dnf install -y htop glances vlc vim git zsh aria2 youtube-dl ffmpeg tmux 
 
 # Install python deps
+sudo dnf install -y openssl openssl-devel
 sudo dnf install -y python python-pip rpm-build
 
 ## Upgrade pip
