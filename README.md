@@ -10,6 +10,8 @@
  * [SSH](./ssh.md)
 * Системные службы
  * [Журналирование](./journalctl.md)
+* Прочее
+ * [VLC](./vlc.md)
 * Дистрибутивы Linux
  * [Fedora](./distributions/fedora.md)
  * [Arch Linux](./distributions/arch_linux.sh)
