@@ -4,18 +4,18 @@
 
 * [Общие команды](./linux.md)
 * Специфика работы с приложениями
- * [Docker](./docker.md)
- * [Git](./git.md)
- * [Postgres](./psql.md)
- * [SSH](./ssh.md)
+  * [Docker](./docker.md)
+  * [Git](./git.md)
+  * [Postgres](./psql.md)
+  * [SSH](./ssh.md)
 * Системные службы
- * [Журналирование](./journalctl.md)
+  * [Журналирование](./journalctl.md)
 * Прочее
- * [VLC](./vlc.md)
+  * [VLC](./vlc.md)
 * Дистрибутивы Linux
- * [Fedora](./distributions/fedora.md)
- * [Arch Linux](./distributions/arch_linux.sh)
- * [Apricity OS](./distributions/apricity_os.md)
+  * [Fedora](./distributions/fedora.md)
+  * [Arch Linux](./distributions/arch_linux.sh)
+  * [Apricity OS](./distributions/apricity_os.md)
 
 ## Установка зависимостей в системе
 
